@@ -20,10 +20,9 @@ const Posts = () => {
     return (
         <div className="row">
           <h1>Posts</h1>
-          {/* Posts malumotlarini to'g'irlas mapni o'zgartirish posts malumotlariga bu muxum */}
-            {data.map((v, i) => <div className="col-md-4 h-100 main">
-              <Slide className="p-4  mt-2 main1 h-100  ">
-              <div className="user ">
+            {data.map((v, i) => <div className="col-md-4 mt-3  main">
+              <Slide className="p-4 h-100  mt-2 main1">
+              <div className="user">
                 <p className="name">{v.title}</p>
                 <p className="body text-center">{v.body}</p>
               </div>

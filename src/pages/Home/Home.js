@@ -11,8 +11,8 @@ import { faHome, faImages, faNewspaper, faTasks, faUsers, faVideo } from '@forta
 
 const menus = [
     { to: "home", title: "Home", icon:  faHome},
-    { to: "users", title: "users", icon: faUsers },
-    { to: "todos", title: "todos", icon: faTasks },
+    { to: "users", title: "Users", icon: faUsers },
+    { to: "todos", title: "Todos", icon: faTasks },
     { to: "albums", title: "Albums", icon: faVideo},
     { to: "photos", title: "Pohotos", icon: faImages },
     { to: "posts", title: "Posts", icon: faNewspaper },

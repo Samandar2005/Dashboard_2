@@ -19,8 +19,8 @@ const Albums = () => {
     console.log(data)
     return (
         <div className="row">
-            {data.map((v, i) => <div className="col-md-4 main">
-              <Slide className="p-4  mt-2 main1 h-99  ">
+            {data.map((v, i) => <div className="col-md-4 mt-3 main">
+              <Slide className="p-3  mt-2 main1 h-100  ">
               <div className="user ">
                 <p className="name">{v.title}</p>
               </div>
