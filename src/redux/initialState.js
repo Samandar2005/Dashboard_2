@@ -1,6 +1,10 @@
 const initialState = {
     isSidebarShow: true,
-    todos: []
+    todos: [],
+    users: [],
+    albums: [],
+    photos: [],
+    posts: [],
 };
 
 export default initialState

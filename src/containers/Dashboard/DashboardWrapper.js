@@ -39,7 +39,7 @@ const DashboardWrapper = styled.div`
                             background-color: rgba(255, 255, 255, 0.5)  !important;
                         }
                     }
-                  
+
 
                     &.active{
                         .MuiButtonBase-root{
@@ -53,11 +53,9 @@ const DashboardWrapper = styled.div`
     }
 
     .rightside{
+        background-image: linear-gradient(to right top, #ffffff, #edecfe, #d6dbfe, #b9cbff, #96bdff);
         flex: 1;
-        /* flex: 1 1 0%; */
-        /* overflow-x: hidden; */
         position: relative;
-
 
         header{
             padding: 20px;
@@ -65,11 +63,6 @@ const DashboardWrapper = styled.div`
             top: 0;
             background-color: white;
             z-index: 1000;
-
-            .logo{
-                height: 40px;
-                margin-right: 20px;
-            }
         }
 
         .content{

@@ -1,34 +1,50 @@
 
 import React from 'react'
-import { Fade, Slide } from "react-awesome-reveal";
-import Dashboard from '../../containers/Dashboard'
-import HomeWrapper from './HomeWrapper'
+import HomeWraper from './HomeWraper'
+import { Slide } from "react-awesome-reveal";
+import { faAngular, faSpeakap, faSpeakerDeck } from '@fortawesome/free-brands-svg-icons'
+import { ListItem } from '@material-ui/core'
+import { Link, useParams } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useDispatch, useSelector } from 'react-redux'
+import { faHome, faImages, faNewspaper, faTasks, faUsers, faVideo } from '@fortawesome/free-solid-svg-icons';
 
-const Home = () => {
+const menus = [
+    { to: "home", title: "Home", icon:  faHome},
+    { to: "users", title: "users", icon: faUsers },
+    { to: "todos", title: "todos", icon: faTasks },
+    { to: "albums", title: "Albums", icon: faVideo},
+    { to: "photos", title: "Pohotos", icon: faImages },
+    { to: "posts", title: "Posts", icon: faNewspaper },
+]
+const Home = ({ children }) => {
+    const dispatch = useDispatch();
+    const { menu } = useParams();
+
+    const show = useSelector(state => state.isSidebarShow);
 
     return (
-
-        <HomeWrapper>
-            <h1>Cards</h1>
+        <HomeWraper>
             <div className="row">
-                <div className="col-sm-6 col-md-4">
-                    <Slide className="p-4 rounded shadow">
-                        <h2>Users</h2>
-                    </Slide>
-                </div>
-                <div className="col-sm-6 col-md-4">
-                    <Slide className="p-4 rounded shadow">
-                        <h2>Todos</h2>
-                    </Slide>
-                </div>
-                <div className="col-sm-6 col-md-4">
-                    <Slide className="p-4 rounded shadow">
-                        <h2>Albums</h2>
-                    </Slide>
-                </div>
-            </div>
-        </HomeWrapper>
+            <h1>HOME</h1>
+
+            {menus.map((v, i) => <div className="col-md-4 main mb-3 ">
+                <Slide delay={i * 30}>
+                    <Link key={v.to} to={`/dashboard/${v.to}`}>
+                    <ListItem button className="main1 fw-bold" >
+                    <FontAwesomeIcon icon={v.icon} className="me-2 " />
+                    <div>
+                    {v.title}
+                    </div>
+                    </ListItem>
+                    </Link>
+                </Slide>
+            </div>)}
+      </div>
+        </HomeWraper>
+
+
     )
 }
 
-export default Home
+export default Home;

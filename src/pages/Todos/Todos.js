@@ -22,8 +22,9 @@ const Todos = () => {
 
     return (
         <TodosWrapper>
+            <div className="table">
             <h1 className="mb-4">Todo</h1>
-            <Table>
+            <Table >
                 <TableHead>
                     <TableRow>
                         <TableCell>id</TableCell>
@@ -32,7 +33,7 @@ const Todos = () => {
                         <TableCell>completed</TableCell>
                     </TableRow>
                 </TableHead>
-                <TableBody>
+                <TableBody className="color">
                     {data.map(v =>
                         <TableRow>
                             <TableCell>{v.id}</TableCell>
@@ -47,6 +48,8 @@ const Todos = () => {
                     )}
                 </TableBody>
             </Table>
+            </div>
+
         </TodosWrapper>
     )
 }

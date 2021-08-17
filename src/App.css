@@ -6,6 +6,33 @@ ul {
 
 a,
 a:hover {
+
   text-decoration: none;
   color: black;
+}
+.image{
+  border-radius: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.name{
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 2px 1px 10px black
+}
+.h1name{
+  margin-top: -10px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 1px 10px black
+}
+.div > a{
+  text-align: center;
+  text-shadow: 2px 1px 10px blue
+}
+.main1{
+  background-image: linear-gradient(to right top, #051937, #10173a, #1c133b, #280e3a, #330537);
+  color: aliceblue;
+  box-shadow: 10px 10px 5px grey;
 }
